@@ -1,4 +1,3 @@
-# simple-dotsql-install
 Simple .SQL Install: Basic PHP / MySQL Simple .sql Install
 
 Author - ic-myXMB
@@ -22,47 +21,25 @@ At:
 
 // connect to server and select database
 
-    "localhost"
-
-    "testUser"
-
-    "testPassword"
-
-    "testDB"
-
-Where:
-   
-    $mysqli = mysqli_connect("localhost", "testUser", "testPassword", "testDB");
-
-
+$mysqli = mysqli_connect("localhost", "testUser", "testPassword", "testDB");
 
 Then you would visit the sql file to edit for your own usages:
 
 sql/db.sql
 
-    sql/db.sql
-
 * as you will note: there is already example table informations in this file in case you want to test out the db-install.php using such, but if not, then you would edit such and replace with your existing table informations.
 
 IF, you opted as suggested to edit the .sql file with your own dbs tables and such then you  would need to edit the db-install.php file to reflect that table diff, as such you would only edit this line:
 
-    "$verify_sql = "SHOW TABLES LIKE 'forum_posts'"
+$verify_sql = "SHOW TABLES LIKE 'forum_posts'";
 
-
-And change the table name:
-
-ie:
-
-    'forum_posts'
-
+And change 'forum_posts'
 
 To whatever the table is you may have and want the install script to check for. Hopefully that makes sense.
 
 Finally to execute, you then in your browser would visit:
 
-
-    db-install.php
-
+db-install.php
 
 to install the db tables.
 
